@@ -1,9 +1,9 @@
-import { strict as assert } from "node:assert";
 import set from "../src/set.js";
+import assert from "power-assert";
+const user = {
+  name: "Madonna",
+  friends: ["Kate", "Michel"],
+  email: "madonna@example.com",
+};
 
-const obj = {};
-
-assert.deepStrictEqual(set(obj, "key1", "value1"), { key1: "value1" });
-assert.deepStrictEqual(set(obj, "key1", "next value"), { key1: "value1" });
-
-console.log("Все тесты пройдены!");
+assert(user.name === "Mikael");
