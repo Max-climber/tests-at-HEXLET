@@ -1,9 +1,7 @@
-// Такой необычный импорт связан с тем,
-// что assert, экспортируемый по умолчанию, считается устаревшим
-// Правильно использовать strict
-import { strict as assert } from "node:assert";
 import capitalize from "../src/capitalize.js";
+import assert from "power-assert";
 
-// Проверка сменилась с отрицательной на положительную
-assert.equal(capitalize(""), "");
-assert.equal(capitalize("hello"), "Hello");
+test("capitalize correctly capitalizes strings", () => {
+  assert.equal(capitalize(""), "");
+  assert.equal(capitalize("hello"), "Hello");
+});
